@@ -1,114 +1,48 @@
+import { Button } from '@/components/ui/button'
 import React from 'react'
 import Image from "next/image"
-import { FaRegHeart } from "react-icons/fa";
-import { IoTrashOutline } from "react-icons/io5";
-import { Button } from '@/components/ui/button';
+import RevCard from '@/components/revCard'
 
 function Page() {
   return (
     <>
-    
-     <section className='flex justify-between mt-[50px] mb-[50px]'>
 
-        {/* first div */}
-        <div>
+       <section className='w-full'>
 
-            <h2 className='text-[22px] leading-[33px] font-medium'>Bag</h2>
+        {/* about div 1 */}
+        <div className='flex items-center justify-center gap-[29px]'>
 
-
-            {/* card div 1*/}
-            <div className='w-[933px] flex gap-[30px] mt-[25px] pb-[37px] border-b-[1px]'>
-
-                {/* picture div */}
-                <div>
-                    <Image src={"/products/product3.png"} alt="chair" width={150} height={150}/>
+            {/* 1 */}
+            <div className='bg-[#007580]  p-[64px] text-white'>
+                <h1 className='text-[32px] leading-[38px] font-semibold'>About Us - Comforty</h1>
+                    
+                <div className='w-[495px] text-[18px] leading-[21px] mt-[12px]'>
+                  <p>At Comforty, we believe that the right chair can transform your space and elevate your comfort. Specializing in ergonomic design, premium materials, and modern aesthetics, we craft chairs that seamlessly blend style with functionality. </p>
                 </div>
 
-                {/* text div */}
-                <div>
-                    <div className=' w-687 flex items-center gap-[487px]'>
-                        <p className='text-[16px] leading-[20px] text-[#272343]'>Library Stool Chair</p>
-                        <h2 className='text-[15px] leading-[28px] font-medium'>MRP: $99</h2>
-                    </div>
-
-                    <p className='text-[15px] leading-[28px] text-[#757575] mt-[28px]'>Ashen Slate/Cobalt Bliss</p>
-
-                    <div className='flex items-center gap-[32px] text-[15px] leading-[28px] text-[#757575]'>
-                        <p>Size: <span className='text-black'>L</span></p>
-                        <p>Quantity: <span className='text-black'>1</span></p>
-                    </div>
-
-                    {/* icons div */}
-                    <div className='flex items-center gap-[16px] mt-[20px]'>
-                       <FaRegHeart size={24}/>
-                       <IoTrashOutline size={24}/>
-                    </div>
-                </div>
-
+                <Button className='w-[179px] h-[56px] bg-[#F9F9F926] mt-[143px] rounded-none'>View collection</Button>
             </div>
 
-
-            {/* second card div */}
-            <div className='w-[933px] flex gap-[30px] mt-[25px] pb-[37px] border-b-[1px]'>
-                
-                {/* picture div */}
-                <div>
-                    <Image src={"/products/cat1.png"} alt="chair" width={150} height={150}/>
-                </div>
-
-                {/* text div */}
-                <div>
-                    <div className=' w-687 flex items-center gap-[487px]'>
-                        <p className='text-[16px] leading-[20px] text-[#272343]'>Library Stool Chair</p>
-                        <h2 className='text-[15px] leading-[28px] font-medium'>MRP: $99</h2>
-                    </div>
-
-                    <p className='text-[15px] leading-[28px] text-[#757575] mt-[28px]'>Ashen Slate/Cobalt Bliss</p>
-
-                    <div className='flex items-center gap-[32px] text-[15px] leading-[28px] text-[#757575]'>
-                        <p>Size: <span className='text-black'>L</span></p>
-                        <p>Quantity: <span className='text-black'>1</span></p>
-                    </div>
-
-                    {/* icons div */}
-                    <div className='flex items-center gap-[16px] mt-[20px]'>
-                       <FaRegHeart size={24}/>
-                       <IoTrashOutline size={24}/>
-                    </div>
-                </div>
-
+            {/* 2 */}
+            <div className='w-[619px] h-[463px] relative'>
+                <Image src={"/products/card5.png"} alt="chair" layout='fill' objectFit='cover'/>
             </div>
-
         </div>
 
 
-        {/* second div 2 */}
-        <div className='w-[350px] h-[295px] text-[#111111]'>
-            <h1 className='text-[21px] leading-[33px]'>Summary</h1>
 
-            <div className='flex items-center justify-between mt-[25px]'>
-                <p className='text-[15px] leading-[28px]'>Subtotal</p>
-                <h2 className='text-[14px] leading-[24px] font-medium'>$198.00</h2>
+        {/* div 2 */}
+        <div className='mt-[132px]'>
+            <h1 className='text-[32px] text-center leading-[35px] font-semibold'>What makes our Brand Different</h1>
+
+            {/* card revew main div */}
+            <div className='w-full h-[244px] flex gap-[29px] mt-[48px]'>
+                <RevCard/>
             </div>
-
-            <div className='flex items-center justify-between mt-[8px]'>
-                <p className='text-[15px] leading-[28px]'>Estimated Delivery & Handling</p>
-                <h2 className='text-[15px] leading-[28px] font-medium'>Free</h2>
-            </div>
-
-            <div className='w-full h-[62px] flex items-center justify-between border-t-[1px] border-b-[1px] mt-[20px]'>
-               <p className='text-[15px] leading-[28px]'>Total</p>
-               <h2 className='text-[14px] leading-[24px] font-medium'>$198.00</h2>
-            </div>
-
-            {/* button */}
-
-            <Button className='w-[334px] h-[60px] text-[15px] leading-[24px] font-medium text-white mt-[32px] py-[18px] px-[100px] rounded-[30px] bg-[#029FAE]'>Member Checkout</Button>
         </div>
 
+       </section>
 
-     </section>
-    
     </>
   )
 }
