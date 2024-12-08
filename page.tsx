@@ -1,75 +1,116 @@
-
-import ProductCard from '@/components/productCard'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import React from 'react'
 import Image from "next/image"
-import { Product_Data } from '@/components/constant/productsPage'
+import { FaRegHeart } from "react-icons/fa";
+import { IoTrashOutline } from "react-icons/io5";
+import { Button } from '@/components/ui/button';
 
-function page() {
+function Page() {
   return (
     <>
+    
+     <section className='flex justify-between mt-[50px] mb-[50px]'>
 
-       <section className='w-full mt-[57px]'>
+        {/* first div */}
+        <div>
 
-        {/* heading */}
-       <div>
-            <h1 className='text-[32px] leading-[35px] font-semibold text-[#272343]'>Our Products</h1>
-      </div>
+            <h2 className='text-[22px] leading-[33px] font-medium'>Bag</h2>
 
 
-        {/* Cards main */}
-        <div className='w-full grid grid-cols-4 gap-y-[84px] grid-rows-3 mt-[40px] '>
-          <ProductCard data={Product_Data} />
+            {/* card div 1*/}
+            <div className='w-[933px] flex gap-[30px] mt-[25px] pb-[37px] border-b-[1px]'>
+
+                {/* picture div */}
+                <div>
+                    <Image src={"/products/product3.png"} alt="chair" width={150} height={150}/>
+                </div>
+
+                {/* text div */}
+                <div>
+                    <div className=' w-687 flex items-center gap-[487px]'>
+                        <p className='text-[16px] leading-[20px] text-[#272343]'>Library Stool Chair</p>
+                        <h2 className='text-[15px] leading-[28px] font-medium'>MRP: $99</h2>
+                    </div>
+
+                    <p className='text-[15px] leading-[28px] text-[#757575] mt-[28px]'>Ashen Slate/Cobalt Bliss</p>
+
+                    <div className='flex items-center gap-[32px] text-[15px] leading-[28px] text-[#757575]'>
+                        <p>Size: <span className='text-black'>L</span></p>
+                        <p>Quantity: <span className='text-black'>1</span></p>
+                    </div>
+
+                    {/* icons div */}
+                    <div className='flex items-center gap-[16px] mt-[20px]'>
+                       <FaRegHeart size={24}/>
+                       <IoTrashOutline size={24}/>
+                    </div>
+                </div>
+
+            </div>
+
+
+            {/* second card div */}
+            <div className='w-[933px] flex gap-[30px] mt-[25px] pb-[37px] border-b-[1px]'>
+                
+                {/* picture div */}
+                <div>
+                    <Image src={"/products/cat1.png"} alt="chair" width={150} height={150}/>
+                </div>
+
+                {/* text div */}
+                <div>
+                    <div className=' w-687 flex items-center gap-[487px]'>
+                        <p className='text-[16px] leading-[20px] text-[#272343]'>Library Stool Chair</p>
+                        <h2 className='text-[15px] leading-[28px] font-medium'>MRP: $99</h2>
+                    </div>
+
+                    <p className='text-[15px] leading-[28px] text-[#757575] mt-[28px]'>Ashen Slate/Cobalt Bliss</p>
+
+                    <div className='flex items-center gap-[32px] text-[15px] leading-[28px] text-[#757575]'>
+                        <p>Size: <span className='text-black'>L</span></p>
+                        <p>Quantity: <span className='text-black'>1</span></p>
+                    </div>
+
+                    {/* icons div */}
+                    <div className='flex items-center gap-[16px] mt-[20px]'>
+                       <FaRegHeart size={24}/>
+                       <IoTrashOutline size={24}/>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
 
+        {/* second div 2 */}
+        <div className='w-[350px] h-[295px] text-[#111111]'>
+            <h1 className='text-[21px] leading-[33px]'>Summary</h1>
 
-        {/* bottom subscribe section */}
-        <div className='w-full text-center mt-[173px] py-[100px] bg-[#F0F2F3]'>
-
-           <h1 className='text-[50px] leading-[58px] font-medium '>Or subscribe to the newsletter</h1>
-
-
-           {/* input and button */}
-           <div className='flex items-center justify-center gap-[74ppx] mt-[20px] text-black'>
-            
-            <div className='border-b-[2px] border-black'>
-            <Input type="email" placeholder="Your email"  className='w-[643px] h-[32px] border-none border-b-[2px] text-[16px] leadin-[16px] py-[15px] px-[20px]' />
+            <div className='flex items-center justify-between mt-[25px]'>
+                <p className='text-[15px] leading-[28px]'>Subtotal</p>
+                <h2 className='text-[14px] leading-[24px] font-medium'>$198.00</h2>
             </div>
 
-            <div className='border-b-[2px] border-black ml-[8px] mb-[2px]'>
-            <Button className='text-[16px] leadin-[110%] font-semibold py-[14px] px-[24px] bg-transparent text-black shadow-none'>Subscribe</Button>
+            <div className='flex items-center justify-between mt-[8px]'>
+                <p className='text-[15px] leading-[28px]'>Estimated Delivery & Handling</p>
+                <h2 className='text-[15px] leading-[28px] font-medium'>Free</h2>
             </div>
 
-          </div>
+            <div className='w-full h-[62px] flex items-center justify-between border-t-[1px] border-b-[1px] mt-[20px]'>
+               <p className='text-[15px] leading-[28px]'>Total</p>
+               <h2 className='text-[14px] leading-[24px] font-medium'>$198.00</h2>
+            </div>
 
+            {/* button */}
 
-
-          {/* heading 2 */}
-          <h1 className='text-[50px] leading-[58px] font-medium mt-[70px]'>Follow products and discounts on Instagram</h1>
-
-
-          {/* pictures div */}
-          <div className='flex itmes-center justify-center gap-[24px] mt-[60px]'>
-
-            <Image src={"/products/cat2.png"} alt="pic" width={186} height={186}/>
-            <Image src={"/products/cat1.png"} alt="pic" width={186} height={186}/>
-            <Image src={"/products/product2.png"} alt="pic" width={186} height={186}/>
-            <Image src={"/products/product1.png"} alt="pic" width={186} height={186}/>
-            <Image src={"/products/product3.png"} alt="pic" width={186} height={186}/>
-            <Image src={"/products/cat3.png"} alt="pic" width={186} height={186}/>
-
-          </div>
-          
-
+            <Button className='w-[334px] h-[60px] text-[15px] leading-[24px] font-medium text-white mt-[32px] py-[18px] px-[100px] rounded-[30px] bg-[#029FAE]'>Member Checkout</Button>
         </div>
 
 
-       </section>
+     </section>
     
     </>
   )
 }
 
-export default page
+export default Page
