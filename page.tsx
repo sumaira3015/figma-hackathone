@@ -1,60 +1,75 @@
+
+import ProductCard from '@/components/productCard'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import React from 'react'
 import Image from "next/image"
-import { Button } from '@/components/ui/button'
-import { FiShoppingCart } from "react-icons/fi";
-import Feature from '@/components/feature';
+import { Product_Data } from '@/components/constant/productsPage'
 
-
-function Page() {
+function page() {
   return (
     <>
-       <section>
 
-        {/* first div */}
-        <div className='flex gap-[111px]'>
-            <div>
-                <Image src={"/products/product2.png"} alt="chairi" width={675} height={607}/>
-            </div>
+       <section className='w-full mt-[57px]'>
 
-            {/* text */}
-            <div>
-                <h1 className='text-[60px] leading-[66px] font-bold text-[#272343]'>Library Stool <br/> Chair</h1>
+        {/* heading */}
+       <div>
+            <h1 className='text-[32px] leading-[35px] font-semibold text-[#272343]'>Our Products</h1>
+      </div>
 
-                <Button className='text-[20] leading-[22] font-semibold text-white bg-[#029FAE] mt-[32px] rounded-[100px]'>$20.00 USD</Button>
 
-                <div className='w-[400px] text-[22] leading-[33px] text-[#272343] pt-[37px] border-t-[1px] mt-[37px]'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                </div>
-
-                <Button className='w-[212px] h-[63px] flex items-center gap-[9px] text-[#FFFFFF] bg-[#029FAE] mt-[32px]'>
-                    <FiShoppingCart size={29} color='white'/>
-                    <p className='text-[20px] leading-[22px] font-medium '>Add To cart</p>
-                </Button>
-            </div>
+        {/* Cards main */}
+        <div className='w-full grid grid-cols-4 gap-y-[84px] grid-rows-3 mt-[40px] '>
+          <ProductCard data={Product_Data} />
         </div>
 
 
-        {/* feature products */}
-        <div className='w-full mt-[123px]'>
 
-            <div className='text-[#000000] font-bold flex items-center justify-between'>
-                <h1 className='text-[28px] leading-[33px]  tracking-[20%]'>Featured Products</h1>
+        {/* bottom subscribe section */}
+        <div className='w-full text-center mt-[173px] py-[100px] bg-[#F0F2F3]'>
 
-                <p className='text-[18px] leading-[21px] underline '>View all</p>
+           <h1 className='text-[50px] leading-[58px] font-medium '>Or subscribe to the newsletter</h1>
+
+
+           {/* input and button */}
+           <div className='flex items-center justify-center gap-[74ppx] mt-[20px] text-black'>
+            
+            <div className='border-b-[2px] border-black'>
+            <Input type="email" placeholder="Your email"  className='w-[643px] h-[32px] border-none border-b-[2px] text-[16px] leadin-[16px] py-[15px] px-[20px]' />
             </div>
 
-
-            {/* main div */}
-            <div className='w-full h-[306px] flex gap-[26px] mt-[69px]'>
-                <Feature/>
+            <div className='border-b-[2px] border-black ml-[8px] mb-[2px]'>
+            <Button className='text-[16px] leadin-[110%] font-semibold py-[14px] px-[24px] bg-transparent text-black shadow-none'>Subscribe</Button>
             </div>
 
+          </div>
+
+
+
+          {/* heading 2 */}
+          <h1 className='text-[50px] leading-[58px] font-medium mt-[70px]'>Follow products and discounts on Instagram</h1>
+
+
+          {/* pictures div */}
+          <div className='flex itmes-center justify-center gap-[24px] mt-[60px]'>
+
+            <Image src={"/products/cat2.png"} alt="pic" width={186} height={186}/>
+            <Image src={"/products/cat1.png"} alt="pic" width={186} height={186}/>
+            <Image src={"/products/product2.png"} alt="pic" width={186} height={186}/>
+            <Image src={"/products/product1.png"} alt="pic" width={186} height={186}/>
+            <Image src={"/products/product3.png"} alt="pic" width={186} height={186}/>
+            <Image src={"/products/cat3.png"} alt="pic" width={186} height={186}/>
+
+          </div>
+          
 
         </div>
+
 
        </section>
+    
     </>
   )
 }
 
-export default Page
+export default page
